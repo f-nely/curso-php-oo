@@ -8,6 +8,11 @@ class Product
     public $brand;
     public $weight;
 
+    public function __construct(string $brand)
+    {
+        $this->brand = $brand;
+    }
+
     public function show(): string
     {
         return "{$this->name}, {$this->description}, {$this->price}, {$this->brand}, {$this->weight} <br>";
@@ -24,30 +29,30 @@ class Product
     }
 }
 
-$tv = new Product;
+$tv = new Product('Samsung');
 //$tv->name = 'TV';
 $tv->setName('TV');
 $tv->description = 'Smart TV';
 $tv->price = 4.500;
-$tv->brand = 'Samsung';
+//$tv->brand = 'Samsung';
 $tv->weight = 15;
 echo $tv->getName();
 echo $tv->show();
 
-$geladeira = new Product;
+$geladeira = new Product('Consul');
 //$geladeira->name = 'Geladeira';
 $geladeira->setName('Geladeira');
 $geladeira->description = 'Degelo automático';
 $geladeira->price = 3.400;
-$geladeira->brand = 'Consul';
+//$geladeira->brand = 'Consul';
 $geladeira->weight = 334;
 echo $geladeira->show();
 
-$microondas = new Product;
+$microondas = new Product('Electrolux');
 $microondas->name = 'Microondas';
 $microondas->description = '';
 $microondas->price = 400.00;
-$microondas->brand = 'Electrolux';
+//$microondas->brand = 'Electrolux';
 $microondas->weight = 20;
 echo $microondas->show();
 
