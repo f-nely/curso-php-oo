@@ -27,6 +27,11 @@ class Product
     {
         return strtolower($this->name);
     }
+
+    public function __destruct()
+    {
+        print 'Destroying ' . __CLASS__ . '<br>';
+    }
 }
 
 $tv = new Product('Samsung');
