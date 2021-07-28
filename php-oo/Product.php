@@ -12,10 +12,16 @@ class Product
     {
         return "{$this->name}, {$this->description}, {$this->price}, {$this->brand}, {$this->weight} <br>";
     }
+
+    public function setName(string $name): void
+    {
+        $this->name = $name;
+    }
 }
 
 $tv = new Product;
-$tv->name = 'TV';
+//$tv->name = 'TV';
+$tv->setName('TV');
 $tv->description = 'Smart TV';
 $tv->price = 4.500;
 $tv->brand = 'Samsung';
@@ -23,7 +29,8 @@ $tv->weight = 15;
 echo $tv->show();
 
 $geladeira = new Product;
-$geladeira->name = 'Geladeira';
+//$geladeira->name = 'Geladeira';
+$geladeira->setName('Geladeira');
 $geladeira->description = 'Degelo automático';
 $geladeira->price = 3.400;
 $geladeira->brand = 'Consul';
