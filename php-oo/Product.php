@@ -17,6 +17,11 @@ class Product
     {
         $this->name = $name;
     }
+
+    public function getName(): string
+    {
+        return strtolower($this->name);
+    }
 }
 
 $tv = new Product;
@@ -26,6 +31,7 @@ $tv->description = 'Smart TV';
 $tv->price = 4.500;
 $tv->brand = 'Samsung';
 $tv->weight = 15;
+echo $tv->getName();
 echo $tv->show();
 
 $geladeira = new Product;
