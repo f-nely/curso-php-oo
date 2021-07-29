@@ -2,7 +2,7 @@
 
 namespace Conta;
 
-class ContaPessoaFisica extends Conta
+final class ContaPessoaFisica extends Conta
 {
     public string $cpf;
 
