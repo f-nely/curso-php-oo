@@ -11,4 +11,9 @@ class School
     {
         return self::$balance;
     }
+
+    public static function addBalance(float $balance): void
+    {
+        self::$balance += $balance;
+    }
 }
